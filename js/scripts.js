@@ -43,7 +43,6 @@ $(() => {
         $subscribeModal.modal('show');
     });
 
-<<<<<<< HEAD
 	/* Subjects page and Courses page dropdown elements */
 	$("#dropdown-boxes-btn-one").click(function(){
 		$("#dropdown-boxes-one").toggle(),
@@ -61,7 +60,7 @@ $(() => {
 		$("#dropdown-boxes-three").toggle(),
 		$("#dropdown-arrow-right-three").toggle(),
 		$("#dropdown-arrow-down-three").toggle()
-=======
+
     /* Slider from Subjects & Teaching page */
 	$("#dropdown-boxes-btn-one").click(function(){
 		$("#dropdown-boxes-one").toggle();
@@ -79,7 +78,7 @@ $(() => {
 		$("#dropdown-boxes-three").toggle();
 		$("#dropdown-arrow-right-three").toggle();
 		$("#dropdown-arrow-down-three").toggle();
->>>>>>> origin/master
+
 	});
 });
 
