@@ -45,40 +45,21 @@ $(() => {
 
 	/* Subjects page and Courses page dropdown elements */
 	$("#dropdown-boxes-btn-one").click(function(){
-		$("#dropdown-boxes-one").toggle(),
-		$("#dropdown-arrow-right-one").toggle(),
-		$("#dropdown-arrow-down-one").toggle()
-	});
-	
-	$("#dropdown-boxes-btn-two").click(function(){
-		$("#dropdown-boxes-two").toggle(),
-		$("#dropdown-arrow-right-two").toggle(),
-		$("#dropdown-arrow-down-two").toggle()
-	});
-	
-	$("#dropdown-boxes-btn-three").click(function(){
-		$("#dropdown-boxes-three").toggle(),
-		$("#dropdown-arrow-right-three").toggle(),
-		$("#dropdown-arrow-down-three").toggle()
-
-    /* Slider from Subjects & Teaching page */
-	$("#dropdown-boxes-btn-one").click(function(){
 		$("#dropdown-boxes-one").toggle();
 		$("#dropdown-arrow-right-one").toggle();
 		$("#dropdown-arrow-down-one").toggle();
 	});
-	
+
 	$("#dropdown-boxes-btn-two").click(function(){
 		$("#dropdown-boxes-two").toggle();
 		$("#dropdown-arrow-right-two").toggle();
 		$("#dropdown-arrow-down-two").toggle();
 	});
-	
+
 	$("#dropdown-boxes-btn-three").click(function(){
 		$("#dropdown-boxes-three").toggle();
 		$("#dropdown-arrow-right-three").toggle();
 		$("#dropdown-arrow-down-three").toggle();
-
 	});
 });
 
@@ -130,7 +111,7 @@ function carousel() {
         dots[i].className = dots[i].className.replace(" white", "");
     }
     dots[myIndex-1].className += " white";
-    setTimeout(carousel, 4000); // Change image every 3 seconds
+    setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 
 
