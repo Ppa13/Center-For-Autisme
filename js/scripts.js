@@ -6,6 +6,13 @@ $(() => {
     const $navlink = $('.nav-link');
     const $subscribeForm = $('#subscribe-form');
     const $subscribeModal = $('#subscribe-modal');
+    const $openManagementPopupBtn = $('#open-management-popup-btn');
+    const $closeManagementPopupBtn = $('#close-management-popup-btn');
+    const $managementPopup = $('#management-popup');
+    const $openPrivacyPopUpBtn = $('#open-privacy-popup-btn');
+    const $closePrivacyPopUpBtn = $('#close-privacy-popup-btn');
+    const $privacyPolicyPopup = $("#privacy-policy-popup");
+
     /*--------------------------------------------------------------
                             Navigation
     --------------------------------------------------------------*/
@@ -22,6 +29,11 @@ $(() => {
         });
 
         return false;
+    });
+
+    /* Show sidenav-submenu */
+    $(".sidenav-toggle-btn").click(function(){
+        $(this).next($(".side-nav-submenu")).toggle();
     });
 
     /* Nav link active */
@@ -44,23 +56,30 @@ $(() => {
     });
 
 	/* Subjects page and Courses page dropdown elements */
-	$("#dropdown-boxes-btn-one").click(function(){
-		$("#dropdown-boxes-one").toggle();
-		$("#dropdown-arrow-right-one").toggle();
-		$("#dropdown-arrow-down-one").toggle();
+	$(".dropdown-box-btn").click(function(){
+        $(this).next($(".dropdown-box-content")).toggle();
+        $(this).toggleClass('bold');
 	});
 
-	$("#dropdown-boxes-btn-two").click(function(){
-		$("#dropdown-boxes-two").toggle();
-		$("#dropdown-arrow-right-two").toggle();
-		$("#dropdown-arrow-down-two").toggle();
-	});
+    /* Employees page - show management popup */
+    $openManagementPopupBtn.click(function(){
+        $managementPopup.toggle();
+    });
 
-	$("#dropdown-boxes-btn-three").click(function(){
-		$("#dropdown-boxes-three").toggle();
-		$("#dropdown-arrow-right-three").toggle();
-		$("#dropdown-arrow-down-three").toggle();
-	});
+    /* Privacy Policy popup */
+    $openPrivacyPopUpBtn.click(function(){
+        $privacyPolicyPopup.toggle();
+    });
+
+    /* Close management popup */
+    $closeManagementPopupBtn.click(function(){
+        $managementPopup.toggle();
+    });
+
+    /* Close privacy popup */
+    $closePrivacyPopUpBtn.click(function(){
+        $privacyPolicyPopup.toggle();
+    });
 });
 
 /*--------------------------------------------------------------
@@ -115,24 +134,5 @@ function carousel() {
 }
 
 
-/*--------------------------------------------------------------
-
---------------------------------------------------------------*/
-
-function popup() {
-  document.getElementById("about-us-management-popup").style.display = "block";
-}
-
-function popupClose() {
-  document.getElementById("about-us-management-popup").style.display = "none";
-}
-
-function popupBg() {
-  document.getElementById("dark-bg-popup-close").style.display = "block";
-}
-
-function popupCloseBg() {
-  document.getElementById("dark-bg-popup-close").style.display = "none";
-}
  
 	
